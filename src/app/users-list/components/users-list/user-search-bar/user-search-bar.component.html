@@ -1,0 +1,19 @@
+<mat-form-field>
+  <mat-label data-test="VOLVO.USERS_LIST.USER_SEARCH_BAR.LABEL">Search by Name:</mat-label>
+  <input
+    matInput
+    data-test="VOLVO.USERS_LIST.USER_SEARCH_BAR.INPUT"
+    type="text"
+    [ngModel]="(searchValue$ | async)"
+    (keyup.enter)="searchUser($event.target)">
+  <button
+    mat-button
+    data-test="VOLVO.USERS_LIST.USER_SEARCH_BAR.CLEAR_BUTTON"
+    *ngIf="(searchValue$ | async)"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="clearSearchBar()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>

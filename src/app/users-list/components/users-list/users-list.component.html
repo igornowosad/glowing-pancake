@@ -1,0 +1,24 @@
+<div class="users">
+  <div class="users__header">
+    <h2>List of Users</h2>
+
+    <app-user-search-bar></app-user-search-bar>
+  </div>
+
+  <app-loading-spinner *ngIf="(isLoading$ | async); else usersTable"></app-loading-spinner>
+  <app-error-message *ngIf="!(isLoading$ | async) && (errorMessage$ | async)"></app-error-message>
+  <app-no-users-message
+    *ngIf="(tableData$ | async)?.length === 0
+  && !(isLoading$ | async)
+  && !(searchValue$ | async)
+  && !(errorMessage$ | async)">
+  </app-no-users-message>
+
+  <ng-template #usersTable>
+    <ng-container *ngIf="(tableData$ | async)?.length === 0 && !!(searchValue$ | async)">
+      There's no matches for provided criteria
+    </ng-container>
+
+    <app-users-table></app-users-table>
+  </ng-template>
+</div>
