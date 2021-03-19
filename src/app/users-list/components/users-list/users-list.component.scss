@@ -1,0 +1,21 @@
+.users {
+  padding: 20px;
+
+  width: 80%;
+  max-width: 1270px;
+  margin: 0 auto;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

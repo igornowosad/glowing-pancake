@@ -1,0 +1,12 @@
+.users-table {
+  &__header {
+    width: 100%;
+    text-align: center;
+    background: #dbdbdb;
+    font-weight: 400;
+  }
+
+  &__list {
+    width: 100%;
+  }
+}

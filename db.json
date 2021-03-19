@@ -1,0 +1,17 @@
+{
+  "names": [
+    {
+      "id": 6
+    },
+    {
+      "name": "Test user 4",
+      "surname": "Test surname",
+      "birthDate": "2021-03-17T23:00:00.000Z",
+      "phone": "123123212",
+      "city": "City",
+      "street": "Street",
+      "number": 1231,
+      "id": 7
+    }
+  ]
+}
